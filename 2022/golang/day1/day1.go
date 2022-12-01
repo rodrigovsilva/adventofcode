@@ -72,5 +72,10 @@ func readInput(filename string) []string {
 		array = append(array, fileScanner.Text())
 	}
 
+	err = readFile.Close()
+	if err != nil {
+		panic(err)
+	}
+
 	return array
 }
